@@ -6,9 +6,9 @@
 [![Python](https://img.shields.io/badge/python-3.14-111111.svg)](https://www.python.org/)
 [![License: CC BY 4.0](https://img.shields.io/badge/dataset%20license-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 [![License: MIT](https://img.shields.io/badge/code%20license-MIT-blue.svg)](LICENSE)
-[![Live Demo](https://img.shields.io/badge/demo-Streamlit%20Community%20Cloud-FF4B4B.svg)](#)
+[![Live Demo](https://img.shields.io/badge/demo-Streamlit%20Community%20Cloud-FF4B4B.svg)](https://cardiosense-ai-mjsk6wbdapj5y27ifeyffh.streamlit.app/)
 
-[Live Application Demo (Streamlit Cloud)](https://share.streamlit.io/) *(Deployment URL will be finalized in Stage 11(f))*
+[Live Application Demo (Streamlit Cloud)](https://cardiosense-ai-mjsk6wbdapj5y27ifeyffh.streamlit.app/)
 
 ---
 
