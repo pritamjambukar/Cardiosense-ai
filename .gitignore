@@ -1,0 +1,33 @@
+# Environment Secrets & Credentials
+.env
+.env.local
+.streamlit/secrets.toml
+
+# Python Virtual Environments
+venv/
+.venv/
+env/
+ENV/
+
+# Python Bytecode & Build Artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+
+# Streamlit Local Cache & Runtime
+.streamlit/*.sqlite3
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# OS-specific files
+Thumbs.db
+.DS_Store
+*.swp
+
+# Binary installers and downloaded archives
+*.exe
+*.zip
+data/raw/git/

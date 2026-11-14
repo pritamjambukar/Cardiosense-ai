@@ -1,0 +1,335 @@
+/* ==============================================================================
+   CARDIOSENSE AI — EDITORIAL CLINICAL STYLESHEET
+   Aesthetic Reference: The House of Rare (Minimalist, Architectural, Monochromatic)
+   ============================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+
+/* --- Root Resets & Global Typography --- */
+html, body, [class*="css"], .stMarkdown, .stText, p, div {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif !important;
+    color: #111111;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Eliminate all rounded bubble aesthetics */
+* {
+    border-radius: 0px !important;
+}
+
+/* Hide default Streamlit decoration header & footer */
+#MainMenu {visibility: hidden;}
+footer {visibility: hidden;}
+header[data-testid="stHeader"] {
+    background-color: transparent !important;
+}
+
+/* --- Editorial Hero Header --- */
+.hero-wrapper {
+    padding: 32px 0 20px 0;
+    border-bottom: 1px solid #E5E5E5;
+    margin-bottom: 24px;
+}
+
+.hero-title {
+    font-family: 'Newsreader', serif !important;
+    font-size: 2.8rem;
+    font-weight: 300;
+    letter-spacing: -0.02em;
+    color: #111111;
+    margin: 0 0 6px 0;
+    line-height: 1.15;
+}
+
+.hero-subtitle {
+    font-size: 0.92rem;
+    font-weight: 400;
+    color: #666666;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+/* --- Restrained Clinical Disclaimer --- */
+.editorial-disclaimer {
+    border-left: 2px solid #111111;
+    background-color: #F8F8F8;
+    padding: 12px 18px;
+    font-size: 0.82rem;
+    line-height: 1.5;
+    color: #444444;
+    margin-bottom: 28px;
+}
+
+.editorial-disclaimer strong {
+    color: #111111;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    font-size: 0.78rem;
+}
+
+/* --- Section Headers --- */
+.section-label {
+    font-size: 0.76rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #888888;
+    margin-bottom: 8px;
+}
+
+.section-title {
+    font-family: 'Newsreader', serif !important;
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: #111111;
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #EAEAEA;
+}
+
+/* --- Minimal Architectural Cards --- */
+.editorial-card {
+    background-color: #FFFFFF;
+    border: 1px solid #E5E5E5;
+    padding: 24px;
+    margin-bottom: 16px;
+}
+
+.metric-number {
+    font-family: 'Newsreader', serif !important;
+    font-size: 3.2rem;
+    font-weight: 300;
+    line-height: 1.0;
+    color: #111111;
+    margin: 8px 0;
+}
+
+.metric-caption {
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #777777;
+}
+
+/* --- Restrained Risk Badges --- */
+.badge-low {
+    display: inline-block;
+    padding: 4px 10px;
+    background-color: #F2F7F4;
+    border: 1px solid #C6DBD0;
+    color: #1E4D38;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.badge-medium {
+    display: inline-block;
+    padding: 4px 10px;
+    background-color: #FDF8ED;
+    border: 1px solid #EED9A7;
+    color: #854D0E;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.badge-high {
+    display: inline-block;
+    padding: 4px 10px;
+    background-color: #FDF2F4;
+    border: 1px solid #F2C4CE;
+    color: #881337;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+/* --- 3-Segment Architectural Risk Gauge --- */
+.gauge-track {
+    display: flex;
+    gap: 3px;
+    height: 4px;
+    background-color: transparent;
+    margin: 16px 0 8px 0;
+}
+
+.gauge-segment {
+    flex: 1;
+    height: 100%;
+    background-color: #EAEAEA;
+    transition: background-color 0.3s ease;
+}
+
+.gauge-segment.active-low { background-color: #1E4D38; }
+.gauge-segment.active-medium { background-color: #854D0E; }
+.gauge-segment.active-high { background-color: #881337; }
+
+.gauge-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.72rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #888888;
+}
+
+/* --- Flat Monochromatic SHAP Attribution Rows --- */
+.shap-list {
+    margin-top: 12px;
+}
+
+.shap-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #F0F0F0;
+    font-size: 0.88rem;
+}
+
+.shap-row:last-child {
+    border-bottom: none;
+}
+
+.shap-val-pos {
+    font-family: 'JetBrains Mono', monospace !important;
+    font-size: 0.82rem;
+    font-weight: 500;
+    color: #881337;
+}
+
+.shap-val-neg {
+    font-family: 'JetBrains Mono', monospace !important;
+    font-size: 0.82rem;
+    font-weight: 500;
+    color: #1E4D38;
+}
+
+/* --- Streamlit Native Overrides: Inputs, Sliders, Tabs & Buttons --- */
+button[kind="primary"], div.stButton > button {
+    background-color: #111111 !important;
+    color: #FFFFFF !important;
+    border: 1px solid #111111 !important;
+    font-size: 0.78rem !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.1em !important;
+    text-transform: uppercase !important;
+    padding: 12px 24px !important;
+    transition: all 0.2s ease !important;
+    box-shadow: none !important;
+}
+
+button[kind="primary"]:hover, div.stButton > button:hover {
+    background-color: #333333 !important;
+    border-color: #333333 !important;
+    color: #FFFFFF !important;
+}
+
+/* Streamlit Tabs */
+.stTabs [data-baseweb="tab-list"] {
+    gap: 24px !important;
+    border-bottom: 1px solid #E5E5E5 !important;
+}
+
+.stTabs [data-baseweb="tab"] {
+    font-size: 0.82rem !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.08em !important;
+    text-transform: uppercase !important;
+    color: #777777 !important;
+    padding: 12px 0 !important;
+    background-color: transparent !important;
+    border: none !important;
+}
+
+.stTabs [aria-selected="true"] {
+    color: #111111 !important;
+    border-bottom: 2px solid #111111 !important;
+}
+
+/* Sliders */
+.stSlider [data-baseweb="slider"] {
+    margin-top: 8px !important;
+}
+
+/* Inputs & Selectboxes */
+div[data-baseweb="input"] input, div[data-baseweb="select"] {
+    border: 1px solid #E5E5E5 !important;
+    background-color: #FFFFFF !important;
+    font-size: 0.88rem !important;
+    box-shadow: none !important;
+}
+
+div[data-baseweb="input"] input:focus {
+    border-color: #111111 !important;
+}
+
+/* --- Editorial Chat Layout --- */
+.chat-container {
+    padding: 16px 0;
+}
+
+.chat-card-assistant {
+    background-color: #F8F8F8;
+    border: 1px solid #EAEAEA;
+    padding: 20px 24px;
+    margin-bottom: 16px;
+    line-height: 1.6;
+    font-size: 0.92rem;
+    color: #222222;
+}
+
+.chat-card-user {
+    background-color: #FFFFFF;
+    border-left: 2px solid #111111;
+    border-top: 1px solid #EEEEEE;
+    border-right: 1px solid #EEEEEE;
+    border-bottom: 1px solid #EEEEEE;
+    padding: 16px 20px;
+    margin-bottom: 16px;
+    font-size: 0.92rem;
+    color: #111111;
+}
+
+.chat-speaker-label {
+    font-size: 0.70rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #888888;
+    margin-bottom: 6px;
+}
+
+.emergency-alert-card {
+    background-color: #FDF2F4;
+    border: 1px solid #F2C4CE;
+    border-left: 4px solid #881337;
+    padding: 18px 22px;
+    color: #881337;
+    font-size: 0.90rem;
+    line-height: 1.6;
+    margin-bottom: 16px;
+}
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.1rem;
+    }
+    .metric-number {
+        font-size: 2.4rem;
+    }
+    .editorial-card {
+        padding: 16px;
+    }
+    .stTabs [data-baseweb="tab-list"] {
+        gap: 12px !important;
+    }
+}
+
